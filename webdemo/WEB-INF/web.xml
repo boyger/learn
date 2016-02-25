@@ -9,21 +9,16 @@
 	<display-name>www.pjk.com</display-name>
 	<description>www.pjk.com</description>
 
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>InitServlet</servlet-name>
 		<servlet-class>com.pjk.servlets.InitServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<servlet>
-		<servlet-name>StatServlet</servlet-name>
-		<servlet-class>com.pjk.servlets.StatServlet</servlet-class>
-	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>ClientLogCollectServlet</servlet-name>
 		<url-pattern>/clientlogcollect.jsp</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 
 	<error-page>
 		<error-code>404</error-code>
