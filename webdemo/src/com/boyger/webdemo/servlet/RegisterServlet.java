@@ -8,30 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(value = "/hello")
-public class HelloServlet extends HttpServlet
+@WebServlet(urlPatterns = "/register")
+public class RegisterServlet extends HttpServlet
 {
 	private static final long	serialVersionUID	= 1L;
 
 	@Override
-	public void init() throws ServletException
-	{
-		log("init invoked");
-	}
-
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-	{
-		resp.getWriter().write("Hello! " + req.getRemoteHost());
-	}
-
-	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-	{}
-
-	@Override
-	public void destroy()
 	{
-		log("destory invoked");
+		String user = req.getParameter("user");
+		String md5Pwd = req.getParameter("pwd");
 	}
 }
