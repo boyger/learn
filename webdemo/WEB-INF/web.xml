@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+	<display-name>www.pjk.com</display-name>
+	<description>www.pjk.com</description>
+
+	<servlet>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.pjk.servlets.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>StatServlet</servlet-name>
+		<servlet-class>com.pjk.servlets.StatServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ClientLogCollectServlet</servlet-name>
+		<url-pattern>/clientlogcollect.jsp</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/underconstru.html</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500.html</location>
+	</error-page>
+
+</web-app>
